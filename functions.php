@@ -219,6 +219,10 @@ function odin_enqueue_scripts() {
 	// jQuery.
 	wp_enqueue_script( 'jquery' );
 
+	// Source sans pro
+	wp_enqueue_style( 'odin-sourcesans', 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,600,400italic', array(), null, 'all' );
+
+
 	// Bootstrap.
 	wp_enqueue_script( 'bootstrap', $template_url . '/assets/js/libs/bootstrap.min.js', array(), null, true );
 

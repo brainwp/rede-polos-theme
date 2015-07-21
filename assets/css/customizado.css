@@ -1,3 +1,58 @@
+/* header */
+#header-img{
+	margin-top:110px;
+	width:100%;
+}
+.bg-graffiti{
+	background:url('../images/bg-header.jpg') top no-repeat !important;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.bg-graffiti .row{
+	padding-bottom: 25px;
+}
+.header-description{
+	margin-top:60px;
+	position: absolute;
+}
+.header-description img{
+	width:100%;
+}
+.infos-bg{
+	width:100%;
+	background: url('../images/bg-destaques.jpg') no-repeat;
+	background-size: cover;
+}
+#slider .section-title{
+	color:#FFF;
+	font-weight: bold;
+}
+#slider .slick-slide{
+	height:290px;
+	overflow: hidden;
+}
+nav#header-nav{
+	background: #639b9e;
+	padding-top:10px;
+	padding-bottom:10px;
+	clear: both;
+	box-shadow: 0px 2px 21px 2px rgba(50, 50, 50, 1);
+}
+nav#header-nav a{
+	font-family: 'Source Sans Pro', sans-serif !important;
+	font-weight: 700 !important;
+	color:#FFF !important;
+	font-size:1.3em !important;
+	text-transform: uppercase;
+	background:transparent !important;
+}
+nav#header-nav a:hover{
+	text-decoration: underline;
+}
+nav#header-nav .row{
+	padding:0;
+}
+
 html body{
 
 	font-family: 'Allan', sans-serif;	
@@ -347,11 +402,6 @@ margin: 0 0 50px;
 #parceiros img{
 	margin-right: 30px;
 }
-#header{
-	background-color:#fff;
-/*	background:url('../images/header-fundo.png');*/
-}
-
 #destaques{
 	
 }
@@ -607,8 +657,17 @@ h2.site-title {
 .polos {
 
 	background: #D39C2F none repeat scroll 0% 0%;
-	margin: 0px 2% 0px 0px;
-	
+	margin: 0px 2% 0px 0px;	
+}
+.destaque-home h3{
+	color:#FFF;
+}
+.destaque-home .btn{
+	background:#639B9E;
+	border:0;
+	font-weight: bold;
+	font-size: 1.3em;
+	color:#FFF !important;
 }
 .rede-paulista {
 	background: #72BB53 none repeat scroll 0% 0%; 
