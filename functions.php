@@ -107,21 +107,6 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		add_editor_style( 'assets/css/editor-style.css' );
 
 		/**
-		 * Add support for infinite scroll.
-		 */
-		add_theme_support(
-			'infinite-scroll',
-			array(
-				'type'           => 'scroll',
-				'footer_widgets' => false,
-				'container'      => 'content',
-				'wrapper'        => false,
-				'render'         => false,
-				'posts_per_page' => get_option( 'posts_per_page' )
-			)
-		);
-
-		/**
 		 * Add support for Post Formats.
 		 */
 		// add_theme_support( 'post-formats', array(
@@ -232,6 +217,7 @@ function odin_enqueue_scripts() {
 
 	// Main jQuery.
 	wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array(), null, true );
+	wp_localize_script( 'odin-main', 'odin', array('ajaxurl' => admin_url( 'admin-ajax.php' )) );
 
 	// Grunt main file with Bootstrap, FitVids and others libs.
 	// wp_enqueue_script( 'odin-main-min', $template_url . '/assets/js/main.min.js', array(), null, true );
@@ -598,3 +584,27 @@ function modify_attachment_link( $markup, $id, $size, $permalink, $icon, $text )
 }
 
 add_filter( 'wp_get_attachment_link', 'modify_attachment_link', 10, 6 );
+
+
+function home_polos_ajax() {
+	$count = 0;
+	$args = array(
+		'post_type' => 'polos',
+		'posts_per_page' => 3,
+		'paged' => $_POST['page_num']
+	);
+	$query = new WP_Query( $args );
+	if( $query->max_num_pages > intval($_POST['page_num'] ) ){
+		header('next-page: true');
+	}
+	while ( $query->have_posts() ) : $query->the_post();
+		if ( $count == 0 ):
+			get_template_part('content','polos-first');
+		else :
+			get_template_part('content','polos');
+		endif;
+		$count++;
+	endwhile;
+	wp_die();
+}
+add_action( 'wp_ajax_home_polos', 'home_polos_ajax' );

@@ -3,6 +3,11 @@
 	margin-top:110px;
 	width:100%;
 }
+body.home{
+	background: url('../images/bg-polos.jpg') no-repeat;
+	background-size: cover !important;
+	background-attachment: fixed;
+}
 .bg-graffiti{
 	background:url('../images/bg-header.jpg') top no-repeat !important;
 	background-attachment: fixed;
@@ -177,9 +182,6 @@ ul{
 #portfolio{
 /*	box-shadow: 0 1px 5px #000;*/
 	min-height:100vh;
-	background:url('../images/portfolio-fundo.png');
-	background-color:#FFF;
-	background-attachment:fixed;
 	padding:11vh 0 4vh;
 }
 #portfolio .botao{
@@ -224,12 +226,10 @@ h2{
 	margin: 40px 6% 50px 5.2%;
 }
 .interno h1{
-	color: #333333;
-	font-weight: 300;
-	border-bottom: 2px solid #333333;
+	color:#639b9e;
+	font-weight: bold;
 	margin: 0 6% 68px 5.2%;
-	text-align: right;
-	text-transform: uppercase;
+	text-align: left;
 	padding-bottom: 15px;
 }
 .capa{
@@ -835,4 +835,50 @@ h2.site-title {
     width: 100%;
 	overflow: hidden;
 }
-
+/* content polos */
+.polos-content a{
+	display: inline-block;
+	overflow: hidden;
+	height:430px;
+}
+.polos-content img{
+	width:100%;
+	min-height:430px !important;
+}
+.polos-content .caption{
+	position: absolute;
+	bottom:0;
+	background:rgba(99,155,158,0.8);
+	width: 94.5%;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 700;
+	font-size:1.7em;
+	color:#FFF !important;
+	text-transform: uppercase;
+	padding-bottom:10px;
+	padding-top:10px;
+}
+.polos-content .more-icon{
+	position: absolute;
+	top:0;
+	right:19px;
+	background:#639b9e;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 700;
+	font-size:3.1em;
+	color:#FFF !important;
+	text-transform: uppercase;
+	padding:15px;
+}
+.polos-first-content{
+	margin-bottom:10px;
+}
+.polos-small img{
+	min-height:210px !important;
+}
+.polos-small a{
+	height:210px;
+}
+.polos-small{
+	margin-bottom:10px;
+}

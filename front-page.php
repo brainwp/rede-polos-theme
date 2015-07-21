@@ -77,83 +77,37 @@ get_header('page'); ?>
 			<div class="col-md-12 clear" style="height:30px"></div><!-- .col-md-12 clear -->
 	
 			<div class="row" id="portfolio">
-				<div id="portfolio-interno" class="interno">
+				<div id="polos-interno" class="interno">
 					<h1>
 						Pólos de Futebol de Rua no Brasil
 					</h1>
 					<div class="clearfix"></div>
 					<!-- portfolio de video -->
 					<?php
-					$count=0;
-					$args2 = array(
-						'posts_per_page' => 1,
-					    'post_type' => 'portfolio',
-						'meta_key' => 'midia',
-						'meta_value'=> 'video',
-						'posts_per_page' => 2
-					);
-					$trabalho_query2 = new  WP_Query( $args2 );
-					?>
-					   <?php while ( $trabalho_query2->have_posts() ) : $trabalho_query2->the_post();
-						$meta = get_post_meta($post->ID);
-					
-						$url = $meta['video'][0];
-					
-					   	$url= parse_url($url);
-						echo '<div class="" id="video_port">';
-						if ($url['host'] == 'vimeo.com' || $url['host'] ==  'www.vimeo.com' ){
-							$imgid = $url['path'];
-													$hash = unserialize(file_get_contents("http://vimeo.com/api/v2/video$imgid.php"));
-													echo '<iframe src="//player.vimeo.com/video'.$imgid.'" width="750" height="421" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
-						}
-						//Youtube
-						elseif ($url['host'] == 'youtube.com' || $url['host'] ==  'www.youtube.com'){
-							parse_str($url['query'], $id_video);
-							$id_video = $id_video['v'];
-							echo '<iframe src="http://www.youtube.com/embed/'.$id_video.'?rel=0&html5=1&autoplay=1&controls=1&showinfo=0&fs=1 width="560" height="315" frameborder="0" allowfullscreen=""></iframe>
-			                ';
-						}
-					   	echo '</div>';
-					   endwhile;
-					   ?>
-					<!-- portfolio de imagens -->
-					<?php
-					$count=0;
+					$count = 0;
 					$args = array(
-						'posts_per_page' => 3,
-					    'post_type' => 'portfolio',
-						'meta_key' => 'midia',
-						'meta_value'=> 'imagem',
-						'posts_per_page' => 2
-					
-					
+					    'post_type' => 'polos',
+						'posts_per_page' => 3
 					);
-					$trabalho_query = new  WP_Query( $args );
+					$query = new WP_Query( $args );
 					?>
-				 	<div  id="fotos_port">
-					   <?php while ( $trabalho_query->have_posts() ) : $trabalho_query->the_post();
-						?>
-						<div class="portfolio">
-							<?php 
-							echo '<a href="'.get_the_permalink().'">';?>
-
-							<div class="descr_portfolio">
-								<?php echo get_the_excerpt();?>
-							</div>
-							<h2>
-								<?php echo get_the_title();?>
-							</h2>
-							<?php 
-							$message = (has_post_thumbnail() ?the_post_thumbnail('port-thumb'): 'não tem');
-							echo $message;
-							echo '</a>';
-							?>
-						</div>
-						<?php 
-					   endwhile;
-					   ?>
-					</div>
-				<h2 class='botao'><a href="portfolio">Mais Pólos...</a></h2>
+					<?php while ( $query->have_posts() ) : $query->the_post();?>
+					    <?php if ( $count == 0 ):?>
+					    	<?php get_template_part('content','polos-first');?>
+					    <?php else: ?>
+							<?php get_template_part('content','polos');?>
+						<?php endif;?>
+						<?php $count++;?>
+					<?php endwhile;?>
+					<!-- portfolio de imagens -->
+					<div id="ajax-load-posts-home"></div><!-- #ajax-load-posts-home -->
+					<div class="col-md-12 text-center">
+						<?php if($query->max_num_pages > 1):?>
+							<a class="btn btn-primary btn-loadmore" id="btn-loadmore-home" data-page="2" data-load="Carregando..">
+								Mais Pólos...
+							</a>
+						<?php endif;?>
+					</div><!-- .col-md-12 text-center -->
 				</div> <!--port-interno-->
 			</div><!--portfolio-->
 		</div><!-- #main -->

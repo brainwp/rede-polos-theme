@@ -80,17 +80,33 @@ jQuery(document).ready(function($) {
 // 	  }
 // 	);
 
-	largura=$('#servicos-rolo').width()
-	$('#servicos-imagens article').width(largura/3-2);
-	var current=$('#servicos-rolo');
-	console.log(current.offsetHeight())
- 	
-	$('#servicos-imagens article').height(altura);
-
-	console.log(altura);
-	
-	
-
+	$('#btn-loadmore-home').on('click',function(e){
+		var data = {
+			'action': 'home_polos',
+			'page_num': $(this).attr('data-page')
+		};
+		$btn = $(this);
+		var default_html = $btn.html();
+		$btn.html( $btn.attr('data-load') );
+		$.ajax({
+		  	type: 'POST',
+		  	url: odin.ajaxurl,
+		  	data: data,
+		  	complete: function(data){
+		  		console.log(data);
+		  		$('#ajax-load-posts-home').append(data.responseText);
+		  		if( ! data.getResponseHeader('next-page') ){
+		  			$btn.fadeOut('slow');
+		  		}
+		  		else{
+		  			var paged = parseInt( $btn.attr('data-page') );
+		  			var paged = parseInt(paged) + 1;
+		  			$btn.attr('data-page', paged);
+		  		}
+		  		$btn.html( default_html );
+		  	}
+		});
+	});
 	
 	
 });
