@@ -165,6 +165,15 @@ function brasa_kirki_add_panel( $wp_customize ) {
 		'title'       => __( 'Seção Participe', 'odin' ),
 		'priority'    => 10,
 	) );
+	$wp_customize->add_section( 'footer', array(
+		'title'       => __( 'Rodapé', 'odin' ),
+		'priority'    => 10,
+	) );
+	$wp_customize->add_section( 'social', array(
+		'title'       => __( 'Redes Sociais', 'odin' ),
+		'priority'    => 10,
+	) );
+
 }
 add_action( 'customize_register', 'brasa_kirki_add_panel' );
 /**
@@ -341,6 +350,51 @@ function brasa_kirki_fields( $fields ) {
 		'section'  => 'participe',
 		'default'  => '',
 		'priority' => 1,
+	);
+
+	$fields[] = array(
+		'type'     		=> 'image',
+		'setting'  		=> 'rodape_img',
+		'label'    		=> __( 'Imagem dos Realizadores no rodapé', 'odin' ),
+		'description'   => __( 'Deixe vazio para usar a imagem padrão', 'odin' ),
+		'section'  		=> 'footer',
+		'default'  		=> '',
+		'priority' 		=> 1,
+	);
+	$fields[] = array(
+		'type'     		=> 'textarea',
+		'setting'  		=> 'rodape_endereco',
+		'label'    		=> __( 'Endereço no rodapé', 'odin' ),
+		'section'  		=> 'footer',
+		'default'  		=> '',
+		'priority' 		=> 1,
+	);
+	$fields[] = array(
+		'type'     		=> 'text',
+		'setting'  		=> 'social_fb',
+		'label'    		=> __( 'URL da página no facebook', 'odin' ),
+		'description'   => __( 'Deixe vazio para não exibir', 'odin' ),
+		'section'  		=> 'social',
+		'default'  		=> '',
+		'priority' 		=> 1,
+	);
+	$fields[] = array(
+		'type'     		=> 'text',
+		'setting'  		=> 'social_instagram',
+		'label'    		=> __( 'URL da página no instagram', 'odin' ),
+		'description'   => __( 'Deixe vazio para não exibir', 'odin' ),
+		'section'  		=> 'social',
+		'default'  		=> '',
+		'priority' 		=> 1,
+	);
+	$fields[] = array(
+		'type'     		=> 'text',
+		'setting'  		=> 'social_email',
+		'label'    		=> __( 'Endereço de email ou endereço da página de contato', 'odin' ),
+		'description'   => __( 'Deixe vazio para não exibir', 'odin' ),
+		'section'  		=> 'social',
+		'default'  		=> '',
+		'priority' 		=> 1,
 	);
 	return $fields;
 }
