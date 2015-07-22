@@ -171,7 +171,13 @@ add_action( 'customize_register', 'brasa_kirki_add_panel' );
  * Create the setting
  */
 function brasa_kirki_fields( $fields ) {
-
+	$fields[] = array(
+		'type'     => 'text',
+		'setting'  => 'image_text',
+		'label'    => __( 'Frase na Placa', 'odin' ),
+		'default'  => '',
+		'priority' => 1,
+	);
 	$fields[] = array(
 		'type'     => 'color',
 		'setting'  => 'box1_color',
