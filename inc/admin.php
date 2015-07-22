@@ -161,6 +161,10 @@ function brasa_kirki_add_panel( $wp_customize ) {
 		'title'       => __( 'Destaques na home', 'odin' ),
 		'priority'    => 10,
 	) );
+	$wp_customize->add_section( 'participe', array(
+		'title'       => __( 'Seção Participe', 'odin' ),
+		'priority'    => 10,
+	) );
 }
 add_action( 'customize_register', 'brasa_kirki_add_panel' );
 /**
@@ -287,6 +291,48 @@ function brasa_kirki_fields( $fields ) {
 		'setting'  => 'box3_btn_url',
 		'label'    => __( 'Link do botão no box 3', 'odin' ),
 		'section'  => 'box_home',
+		'default'  => '',
+		'priority' => 1,
+	);
+
+	$fields[] = array(
+		'type'     => 'image',
+		'setting'  => 'participe_bg',
+		'label'    => __( 'Imagem de background', 'odin' ),
+		'description' => __( 'Deixe vazio para usar a imagem padrão', 'odin' ), 
+		'section'  => 'participe',
+		'default'  => '',
+		'priority' => 1,
+	);
+	$fields[] = array(
+		'type'     => 'text',
+		'setting'  => 'participe_title',
+		'label'    => __( 'Titulo da seção', 'odin' ),
+		'section'  => 'participe',
+		'default'  => '',
+		'priority' => 1,
+	);
+	$fields[] = array(
+		'type'     => 'textarea',
+		'setting'  => 'participe_text',
+		'label'    => __( 'Descrição da seção', 'odin' ),
+		'section'  => 'participe',
+		'default'  => '',
+		'priority' => 1,
+	);
+	$fields[] = array(
+		'type'     => 'text',
+		'setting'  => 'participe_btn_url',
+		'label'    => __( 'URL do Link no botão', 'odin' ),
+		'section'  => 'participe',
+		'default'  => '',
+		'priority' => 1,
+	);
+	$fields[] = array(
+		'type'     => 'text',
+		'setting'  => 'participe_btn',
+		'label'    => __( 'Titulo no botão', 'odin' ),
+		'section'  => 'participe',
 		'default'  => '',
 		'priority' => 1,
 	);

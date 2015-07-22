@@ -112,6 +112,6 @@ get_header('page'); ?>
 			</div><!--portfolio-->
 		</div><!-- #main -->
 	</div><!-- #primary -->
-
+	<?php get_template_part('/parts/participe');?>
 <?php
 get_footer('page');

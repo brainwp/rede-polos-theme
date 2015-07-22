@@ -882,3 +882,42 @@ h2.site-title {
 .polos-small{
 	margin-bottom:10px;
 }
+/* template part participe */
+section#participe{
+	padding:10px;
+	padding-bottom:50px;
+	background-image:url('../images/bg-participe.jpg');
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+}
+section#participe .section-title{
+	text-align: center;
+	color:#FFF;
+	font-weight: bold !important;
+	width:100%;
+	clear:both;
+	margin:0 !important;
+	font-size:3.2em;
+	padding-top:30px;
+}
+section#participe .section-text{
+	font-family: 'Source Sans Pro',sans-serif;
+	font-weight: 400;
+	color:#FFF;
+	text-align: center;
+	font-size:1.4em;
+	padding-left: 25%;
+	padding-right: 25%;
+}
+section#participe .btn-container{
+	padding-top:40px;
+}
+section#participe a.btn{
+	background: #FFF;
+	color:#639b9e;
+	font-size: 1.8em;
+	font-weight: bold;
+	border:0;
+	padding-left:20px;
+	padding-right:20px;
+}
