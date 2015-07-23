@@ -1225,20 +1225,45 @@ img.page-thumbnail{
 	font-weight: 400;
 	font-size:1.3em;
 }
-body.page #servicos-interno{
+body.page #servicos-interno, body.single #servicos-interno{
 	margin-top: 80px
 }
-body.page{
+body.page, body.single{
 	background: url('../images/bg-polos.jpg') bottom no-repeat;
 	background-size: cover !important;
 	background-attachment: fixed;
 }
-body.page .destaque-home.copa-america{
+body.page .destaque-home.copa-america,
+body.single .destaque-home.copa-america{
 	background:#639b9e;
 }
-body.page .destaque-home.copa-america .btn.btn-primary{
+body.page .destaque-home.copa-america .btn.btn-primary,
+body.single .destaque-home.copa-america .btn.btn-primary{
 	background:#FFF !important;
 	color:#639b9e !important;
+}
+body{
+	max-width: 100% !important;
+	overflow-x:hidden;
+}
+.data-caption .the-data, .data-caption .the-data a{
+	font-family: 'Source Sans Pro', sans-serif;
+	color:#FFF !important;
+	font-size:1.5em;
+}
+.data-caption .the-data a{
+	font-size:1.0em;
+	text-transform: uppercase;
+}
+.data-caption .the-data{
+	position: absolute;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin-top:-87px;
+	right:-15px;
+	background: #639b9e;
 }
 @media screen and (max-width: 700px) {
 	.destaque-home{
@@ -1247,4 +1272,30 @@ body.page .destaque-home.copa-america .btn.btn-primary{
 		clear: both;
 		float: left;
 	}
+}
+body.single .bg-page .container{
+	background:#FFF;
+}
+body.single .entry-title{
+	font-family: 'Source Sans Pro', sans-serif;
+	color:#639b9e !important;
+	font-weight: 600 !important;
+	text-transform: uppercase;
+	margin:0 !important;
+}
+body.single .container.no-thumb{
+	margin-top:60px;
+}
+body.single .bg-page .container{
+	margin-bottom:60px;
+}
+#comments *{
+	font-family: 'Source Sans Pro', sans-serif !important;
+}
+#comments-title{
+	margin:0;
+	padding-top:30px;
+	color:#639b9e !important;
+	font-weight: 600 !important;
+	text-transform: uppercase;
 }
