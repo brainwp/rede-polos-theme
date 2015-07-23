@@ -225,6 +225,11 @@ body.home{
 	background-attachment: fixed;
 }
 .bg-graffiti{
+	background:url('../images/bg-header.jpg') center no-repeat !important;
+	background-attachment: fixed;
+	background-size: cover;
+}
+body.home .bg-graffiti{
 	background:url('../images/bg-header.jpg') top no-repeat !important;
 	background-attachment: fixed;
 	background-size: cover;
@@ -232,12 +237,17 @@ body.home{
 .bg-graffiti .row{
 	padding-bottom: 25px;
 }
-.header-description{
+body.home .header-description{
 	margin-top:60px;
 	position: absolute;
 }
 .header-description img{
+	padding-top:10px;
+	width: 100%;
+}
+body.home .header-description img{
 	width:100%;
+	padding:0;
 }
 .infos-bg{
 	width:100%;
@@ -1190,4 +1200,40 @@ section#participe a.btn{
 }
 .dev .brasa:hover{
 	transform: rotate(360deg);
+}
+/* page.php */
+img.page-thumbnail{
+	padding:0;
+}
+.bg-page{
+	background: url('../images/bg-page.jpg') center no-repeat;
+	background-size: cover !important;
+	background-attachment: fixed;
+}
+.entry-title{
+	font-weight: bold;
+	color:white;
+	width:100%;
+	display: inline-block;
+}
+.entry-content{
+	font-family: 'Source Sans Pro', sans-serif;
+	color:#000;
+	font-weight: 400;
+	font-size:1.3em;
+}
+body.page #servicos-interno{
+	margin-top: 80px
+}
+body.page{
+	background: url('../images/bg-polos.jpg') bottom no-repeat;
+	background-size: cover !important;
+	background-attachment: fixed;
+}
+body.page .destaque-home.copa-america{
+	background:#639b9e;
+}
+body.page .destaque-home.copa-america .btn.btn-primary{
+	background:#FFF !important;
+	color:#639b9e !important;
 }

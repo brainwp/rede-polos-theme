@@ -62,13 +62,15 @@ $uri= get_template_directory_uri();
 					<div class="row">
 						<div class="container header-description">
 							<img src="<?php echo get_template_directory_uri();?>/assets/images/logo.png">
-							<?php if( $text = kirki_get_option('image_text') ): ?>
+							<?php if( $text = kirki_get_option('image_text') && is_home() ): ?>
 								<h2 class="image-text">
 									<?php echo apply_filters('the_title', $text);?>
 								</h2><!-- .image-text -->
 							<?php endif;?>
 						</div><!-- .col-md-12 header-description -->
-						<img id="header-img" src="<?php echo get_template_directory_uri();?>/assets/images/bg-players.png">
+						<?php if( is_home() ): ?>
+							<img id="header-img" src="<?php echo get_template_directory_uri();?>/assets/images/bg-players.png">
+					    <?php endif;?>
 					</div><!-- .row -->
 				</div><!-- .container -->
 			</div><!--div header interno-->
