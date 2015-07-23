@@ -16,9 +16,9 @@
 			<div class="container">
 				<div class="row">
 					<?php if( $image = kirki_get_option('rodape_img') ): ?>
-						<img src="<?php echo $image;?>" class="col-md-12" />
+						<img src="<?php echo $image;?>" class="col-md-12 realizadores-img" />
 					<?php else : ?>
-						<img src="<?php echo get_template_directory_uri();?>/assets/images/bg-realizadores.jpg" class="col-md-12" />
+						<img src="<?php echo get_template_directory_uri();?>/assets/images/bg-realizadores.jpg" class="col-md-12 realizadores-img" />
 					<?php endif;?>
 					<div class="line-separator col-md-12"></div><!-- .line-separator col-md-12 -->
 					<div class="col-md-5 endereco pull-left">

@@ -61,7 +61,9 @@ $uri= get_template_directory_uri();
 				<div class="container">
 					<div class="row">
 						<div class="container header-description">
-							<img src="<?php echo get_template_directory_uri();?>/assets/images/logo.png">
+							<a href="<?php echo home_url();?>">
+								<img src="<?php echo get_template_directory_uri();?>/assets/images/logo.png">
+							</a>
 							<?php if( $text = kirki_get_option('image_text') && is_home() ): ?>
 								<h2 class="image-text">
 									<?php echo apply_filters('the_title', $text);?>

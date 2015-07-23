@@ -1201,6 +1201,9 @@ section#participe a.btn{
 .dev .brasa:hover{
 	transform: rotate(360deg);
 }
+img.realizadores-img{
+	width: 100%;
+}
 /* page.php */
 img.page-thumbnail{
 	padding:0;
@@ -1236,4 +1239,12 @@ body.page .destaque-home.copa-america{
 body.page .destaque-home.copa-america .btn.btn-primary{
 	background:#FFF !important;
 	color:#639b9e !important;
+}
+@media screen and (max-width: 700px) {
+	.destaque-home{
+		margin-bottom:10px;
+		width:100%;
+		clear: both;
+		float: left;
+	}
 }
