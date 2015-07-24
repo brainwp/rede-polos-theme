@@ -1,8 +1,8 @@
 <?php
 /**
  * Modelo para a página inicial
- * Template for the front-page
- *
+ * Template Name: Inicial
+ * 
  *
  */
 
