@@ -182,7 +182,7 @@ add_action( 'customize_register', 'brasa_kirki_add_panel' );
 function brasa_kirki_fields( $fields ) {
 	$fields[] = array(
 		'type'     => 'text',
-		'setting'  => 'image_text',
+		'setting'  => 'placa_text',
 		'label'    => __( 'Frase na Placa', 'odin' ),
 		'default'  => '',
 		'priority' => 1,
