@@ -101,6 +101,14 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 
 		add_theme_support( 'custom-background', $defaults );
 
+		add_theme_support( 'infinite-scroll', array(
+			'type'           => 'click',
+			'footer_widgets' => false,
+			'container'      => 'content',
+			'wrapper'        => true,
+			'render'         => false,
+			'posts_per_page' => false,
+		));
 		/**
 		 * Support Custom Editor Style.
 		 */
@@ -608,3 +616,7 @@ function home_polos_ajax() {
 	wp_die();
 }
 add_action( 'wp_ajax_home_polos', 'home_polos_ajax' );
+function new_excerpt_length($length) {
+    return 200;
+}
+add_filter('excerpt_length', 'new_excerpt_length');

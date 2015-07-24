@@ -1225,23 +1225,38 @@ img.page-thumbnail{
 	font-weight: 400;
 	font-size:1.3em;
 }
-body.page #servicos-interno, body.single #servicos-interno{
+body.page #servicos-interno, 
+body.archive #servicos-interno, 
+body.blog #servicos-interno,
+body.single #servicos-interno{
 	margin-top: 80px
 }
-body.page, body.single{
+body.page, 
+body.archive,
+body.blog,
+body.single{
 	background: url('../images/bg-polos.jpg') bottom no-repeat;
 	background-size: cover !important;
 	background-attachment: fixed;
 }
 body.page .destaque-home.copa-america,
+body.archive .destaque-home.copa-america,
+body.blog .destaque-home.copa-america,
 body.single .destaque-home.copa-america{
 	background:#639b9e;
 }
 body.page .destaque-home.copa-america .btn.btn-primary,
+body.blog .destaque-home.copa-america .btn.btn-primary,
+body.archive .destaque-home.copa-america .btn.btn-primary,
 body.single .destaque-home.copa-america .btn.btn-primary{
 	background:#FFF !important;
 	color:#639b9e !important;
 }
+body.home .destaque-home.copa-america .btn.btn-primary{
+	background:#639B9E !important;
+	color:#FFF !important;
+}
+
 body{
 	max-width: 100% !important;
 	overflow-x:hidden;
@@ -1298,4 +1313,68 @@ body.single .bg-page .container{
 	color:#639b9e !important;
 	font-weight: 600 !important;
 	text-transform: uppercase;
+}
+/* index.php */
+.each-post-content{
+	display: inline-block;
+}
+.each-post-content .img-container{
+	padding-top:10px;
+	width:100%;
+	height:180px;
+	overflow: hidden;
+}
+.each-post-content img{
+	min-height: 180px;
+	width:100%;
+}
+.each-post-content .the-content{
+	background: #FFF;
+	padding:10px;
+	height:230px;
+	overflow: hidden;
+}
+.each-post-content .fade-bg{
+	position: absolute;
+	width:100%;
+	background: url('../images/bg-fade.png');
+	height: 105px;
+	top:-103px;
+}
+.each-post-content .fade-container{
+	padding:0;
+	margin:0;
+}
+.each-post-content .the-content{
+	color:#434d50;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+}
+.each-post-content .the-title{
+	text-transform: uppercase;
+	margin: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+	color:#639b9e;
+	width: 100%;
+	display: inline-block;
+	clear: both;
+}
+.each-post-content .more-container{
+	margin:0;
+	padding:0;
+}
+.each-post-content .more-content{
+	position: absolute;
+	right:0;
+	background:#639b9e;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+	color:#FFF;
+	text-align: center;
+	font-size: 2.2em;
+	margin-top: 127px;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
