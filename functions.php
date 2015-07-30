@@ -618,6 +618,7 @@ function home_polos_ajax() {
 	wp_die();
 }
 add_action( 'wp_ajax_home_polos', 'home_polos_ajax' );
+add_action( 'wp_ajax_nopriv_home_polos', 'home_polos_ajax' );
 function new_excerpt_length($length) {
     return 200;
 }
