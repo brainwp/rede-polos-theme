@@ -79,7 +79,7 @@ get_header('page'); ?>
 			<div class="row" id="portfolio">
 				<div id="polos-interno" class="interno">
 					<h1>
-						Pólos de Futebol de Rua no Brasil
+						Polos de Futebol de Rua
 					</h1>
 					<div class="clearfix"></div>
 					<!-- portfolio de video -->
@@ -104,7 +104,7 @@ get_header('page'); ?>
 					<div class="col-md-12 text-center">
 						<?php if($query->max_num_pages > 1):?>
 							<a class="btn btn-primary btn-loadmore" id="btn-loadmore-home" data-page="2" data-load="Carregando..">
-								Mais Pólos...
+								Mais Polos...
 							</a>
 						<?php endif;?>
 					</div><!-- .col-md-12 text-center -->

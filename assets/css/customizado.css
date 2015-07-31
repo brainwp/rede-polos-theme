@@ -1102,7 +1102,7 @@ h2.site-title {
 	padding:10px 25px;
 }
 .polos-first-content{
-	margin-bottom:10px;
+	margin-bottom:30px;
 }
 .polos-small img{
 	min-height:210px !important;
@@ -1192,7 +1192,7 @@ section#participe a.btn{
 	color:#000;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size:1.4em;
-	padding-top: 20px !important;
+	padding-top: 0px;
 }
 .dev .genericon{
 	transition-duration: 0.3s;
