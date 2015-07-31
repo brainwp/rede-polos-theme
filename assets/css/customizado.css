@@ -210,7 +210,8 @@
 
 .image-text{
 	text-transform: none !important;
-	margin-top: 26%;
+	font-size: 4em;
+	margin-top: 25.5%;
 	float: left;
 	margin-left: 47%;
 	font-weight: bold;
@@ -242,7 +243,7 @@ body.home .header-description{
 	position: absolute;
 }
 .header-description img{
-	padding-top:10px;
+	padding-top:40px;
 	width: 100%;
 }
 body.home .header-description img{
@@ -257,6 +258,8 @@ body.home .header-description img{
 #slider .section-title{
 	color:#FFF;
 	font-weight: bold;
+	font-size: 2.7em;
+	margin: 35px 20px;
 }
 #slider .slick-slide{
 	height:290px;
@@ -454,7 +457,7 @@ h2{
 .interno h1{
 	color:#639b9e;
 	font-weight: bold;
-	margin: 0 6% 68px 5.2%;
+	margin: 0 6% 30px 2%;
 	text-align: left;
 	padding-bottom: 15px;
 }
@@ -889,11 +892,12 @@ h2.site-title {
 	color:#FFF;
 }
 .destaque-home .btn{
-	background:#639B9E;
-	border:0;
-	font-weight: bold;
-	font-size: 1.3em;
-	color:#FFF !important;
+    background: #639B9E none repeat scroll 0% 0%;
+    border: 0px none;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #FFF !important;
+    margin: 10px;
 }
 .rede-paulista {
 	background: #72BB53 none repeat scroll 0% 0%; 
@@ -1066,6 +1070,7 @@ h2.site-title {
 	display: inline-block;
 	overflow: hidden;
 	height:430px;
+	padding: 0;
 }
 .polos-content img{
 	width:100%;
@@ -1075,7 +1080,7 @@ h2.site-title {
 	position: absolute;
 	bottom:0;
 	background:rgba(99,155,158,0.8);
-	width: 94.5%;
+	width: 99.5%;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 700;
 	font-size:1.7em;
@@ -1087,14 +1092,14 @@ h2.site-title {
 .polos-content .more-icon{
 	position: absolute;
 	top:0;
-	right:19px;
+	right:3px;
 	background:#639b9e;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 700;
 	font-size:3.1em;
 	color:#FFF !important;
 	text-transform: uppercase;
-	padding:15px;
+	padding:10px 25px;
 }
 .polos-first-content{
 	margin-bottom:10px;
@@ -1106,7 +1111,7 @@ h2.site-title {
 	height:210px;
 }
 .polos-small{
-	margin-bottom:10px;
+	margin-bottom:30px;
 }
 /* template part participe */
 section#participe{
@@ -1157,7 +1162,7 @@ section#participe a.btn{
 #footer .endereco{
 	color:#000;
 	font-family: 'Source Sans Pro', sans-serif;
-	font-size:2.1em;
+	font-size:1.7em;
 	padding:0;
 	text-align: left;
 }
@@ -1229,7 +1234,7 @@ body.page #servicos-interno,
 body.archive #servicos-interno, 
 body.blog #servicos-interno,
 body.single #servicos-interno{
-	margin-top: 80px
+	margin-top: 40px
 }
 body.page, 
 body.archive,
@@ -1470,4 +1475,21 @@ body.single .bg-page .container{
 	font-size: 1.8em;
 	padding:10px !important;
 	color:#FFF !important;
+}
+
+#btn-loadmore-home {
+	
+	font-size: 1.6em;
+	margin: 20px;
+	font-weight: bold;
+	border: none;
+}
+
+#servicos-interno p {
+	font-size: 1.2em;
+	font-weight: 300;
+}
+
+#polos-interno {
+	width: 90%;
 }
