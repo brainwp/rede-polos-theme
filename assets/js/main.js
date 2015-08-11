@@ -108,5 +108,15 @@ jQuery(document).ready(function($) {
 		});
 	});
 	
+	if ( $('body').hasClass('home') ) {
+		$( '.nav.navbar-nav .home-scroll a' ).on('click', function( e ) {
+			e.preventDefault();
+			var url = $( this ).attr('href').split( '#' );
+			$('html, body').animate({
+				scrollTop: $( '#' + url[1] ).offset().top
+			}, 2000);
+		});
+	}
+
 	
 });
