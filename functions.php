@@ -623,3 +623,16 @@ function new_excerpt_length($length) {
     return 200;
 }
 add_filter('excerpt_length', 'new_excerpt_length');
+
+function add_caption_slider_rede($html){
+	global $brasa_slider_item_id, $brasa_slider_id;
+	if( get_the_title( $brasa_slider_id ) != 'Destaques' )
+		return;
+
+	if( get_post_type($brasa_slider_item_id) != 'attachment ' ){
+		(string) $html .= '<div class="caption-slider col-md-12"><span>'.get_the_title($brasa_slider_item_id) . '</span></div>';
+	}
+
+	return $html;
+}
+add_filter('brasa_slider_loop_before_image','add_caption_slider_rede');
