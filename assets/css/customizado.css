@@ -267,24 +267,48 @@ body.home .header-description img{
 }
 nav#header-nav{
 	background: #639b9e;
-	padding-top:10px;
-	padding-bottom:10px;
 	clear: both;
 	box-shadow: 0px 2px 21px 2px rgba(50, 50, 50, 1);
 }
 nav#header-nav a{
 	font-family: 'Source Sans Pro', sans-serif !important;
 	font-weight: 700 !important;
+	padding:20px;
 	color:#FFF !important;
 	font-size:1.3em !important;
 	text-transform: uppercase;
-	background:transparent !important;
+	background:transparent;
 }
 nav#header-nav a:hover{
-	text-decoration: underline;
+	text-decoration: none;
+	background: #448184;
 }
 nav#header-nav .row{
 	padding:0;
+}
+
+.btn-articulacao {
+
+	background: #FFF none repeat scroll 0% 0%;
+	border: 0px none;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 10px;
+	border-radius: 8px;
+
+}
+
+nav#header-nav .btn-articulacao a {
+	color: #639B9E !important;
+	font-family: "Allan",sans-serif !important;
+	font-size: 1.1em;
+	font-weight: bold !important;
+	text-transform: none;
+	padding: 10px;
+}
+
+nav#header-nav .btn-articulacao a:hover {
+	background: none;
 }
 
 html body{
@@ -1165,6 +1189,7 @@ section#participe a.btn{
 	font-size:1.7em;
 	padding:0;
 	text-align: left;
+	line-height: 1.8;
 }
 #footer .pull-right{
 	padding:0;
@@ -1173,6 +1198,8 @@ section#participe a.btn{
 #footer .redes{
 	padding:0;
 	text-align: right;
+	margin-bottom: 10px;
+	margin-top: 5px;
 }
 #footer .redes span{
 	color:#747275 !important;
