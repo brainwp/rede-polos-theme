@@ -36,6 +36,21 @@ $uri= get_template_directory_uri();
 
 <body <?php body_class(); ?>>
 	<nav id="header-nav" class="col-md-12">
+
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-navigation">
+					<span class="sr-only"><?php _e( 'Toggle navigation', 'odin' ); ?></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<?php /*
+
+					<a class="navbar-brand" href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+
+					*/ ?>
+				</div>
+
 		<div class="container">
 			<div class="row">
 				<div class="collapse navbar-collapse navbar-main-navigation">

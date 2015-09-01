@@ -1319,6 +1319,47 @@ body{
 		clear: both;
 		float: left;
 	}
+
+	.copa-america {
+	    margin: 0px 0px 0px 0%;
+	}
+
+	body.home .header-description {
+	    margin-top: 0px;
+	}
+
+	.header-description img {
+	    padding-top: 10px;
+	}
+
+	#header-img {
+	    margin-top: 20px;
+	}
+
+	body.page #servicos-interno, body.archive #servicos-interno, body.blog #servicos-interno, body.single #servicos-interno {
+	    margin-top: 0px;
+	}
+
+	#slider .slick-slide {
+	    height: auto;
+	}
+
+	.caption-slider {
+	    font-size: 1.5em;
+	}
+
+	#portfolio {
+	    padding: 3vh 0 3vh;
+	}
+
+	.polos-content .more-icon {
+	    right: 1px;
+	}
+
+	.row {
+	    padding: 3vh 0;
+	}
+
 }
 body.single .bg-page .container{
 	background:#FFF;
@@ -1542,3 +1583,34 @@ body.single .bg-page .container{
 #polos-interno {
 	width: 90%;
 }
+
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+    margin-right: 15px;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: #FFF;
+    background-image: none;
+    border: 1px solid #639b9e;
+    border-radius: 4px;
+}
+
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #639b9e;
+}
+
+.navbar-collapse .navbar-nav {
+    margin: 2.5px 0px;
+}
+
+.navbar-collapse {
+    padding-left: 0px;
+}
+
