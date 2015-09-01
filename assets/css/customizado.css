@@ -1345,7 +1345,7 @@ body{
 	}
 
 	.caption-slider {
-	    font-size: 1.5em;
+	    font-size: 1.5em !important;
 	}
 
 	#portfolio {
@@ -1360,6 +1360,29 @@ body{
 	    padding: 3vh 0;
 	}
 
+	#footer .endereco, .dev {
+	    font-size: 1.2em;
+	}
+
+	.image-text {
+	    font-size: 2.5em;
+	}
+}
+
+@media screen and (max-width: 460px) {
+
+	.image-text {
+	    font-size:1.5em;
+ 	    margin-top: 28.5%;
+	}
+
+}
+
+@media screen and (max-width: 260px) {
+	.image-text {
+	    font-size: 0.7em;
+	    margin-top: 35%;
+	}
 }
 body.single .bg-page .container{
 	background:#FFF;
