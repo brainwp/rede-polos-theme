@@ -3,7 +3,7 @@
  * The template for content polos
  */
 ?>
-<div class="col-md-6 pull-right polos-content polos-small animated bounce">
+<div class="col-md-6 pull-left polos-content polos-small animated bounce">
 	<a href="<?php the_permalink();?>" class="col-md-12">
 		<?php the_post_thumbnail( 'medium' );?>
 		<div class="col-md-12 caption">

@@ -1367,6 +1367,10 @@ body{
 	.image-text {
 	    font-size: 2.5em;
 	}
+
+	section#participe .section-text {
+	    font-size: 1.2em;
+	}
 }
 
 @media screen and (max-width: 460px) {
@@ -1591,10 +1595,12 @@ body.single .bg-page .container{
 }
 
 #btn-loadmore-home {
-	
+	clear: both;
+	max-width: 60%;
+	display: block;
 	font-size: 1.6em;
-	margin: 20px;
-	font-weight: bold;
+	margin: 20px auto;
+	font-weight: bold;	
 	border: none;
 }
 
