@@ -101,6 +101,7 @@ get_header('page'); ?>
 					<?php endwhile;?>
 					<!-- portfolio de imagens -->
 					<div id="ajax-load-posts-home"></div><!-- #ajax-load-posts-home -->
+					<div class="clear"></div>
 					<div class="col-md-12 text-center">
 						<?php if($query->max_num_pages > 1):?>
 							<a class="btn btn-primary btn-loadmore" id="btn-loadmore-home" data-page="2" data-load="Carregando..">
