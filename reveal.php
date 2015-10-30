@@ -32,7 +32,7 @@ $options = get_option('geral_cfg');
 				<?php the_content();?>
 				<?php if( $url = get_post_meta( get_the_ID(), 'site_url', true ) ) : ?>
 					<a href="<?php echo esc_url( $url ); ?>" class="btn btn-primary btn-large btn-reveal pull-right">
-						<?php _e('Acesse o site do Pólo', 'rede-polos-theme');?>
+						<?php _e('Acesse o site do Polo', 'rede-polos-theme');?>
 					</a>
 				<?php endif;?>
 			</div><!-- .col-md-7 reveal-content -->
